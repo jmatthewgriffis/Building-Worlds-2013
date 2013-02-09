@@ -1,6 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/troopersMove.cs">
+    <Files>
+      <File FileName="Assets/troopersMove.cs" Line="36" Column="3" />
+      <File FileName="../Week2/Skybox/Assets/scripts/cubeMove.cs" Line="18" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
