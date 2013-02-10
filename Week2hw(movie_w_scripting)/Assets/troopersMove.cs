@@ -62,6 +62,15 @@ public class troopersMove : MonoBehaviour
 				moveState = 5;
 			}
 		}
+		else if (moveState == 5) {
+			if (timer < (wait / Time.deltaTime)*5) {
+				timer++;
+			} else {
+				move = false;
+				timer = 0;
+				moveState = 6;
+			}
+		}
 		
 		//Debug.Log (timer);
 		
