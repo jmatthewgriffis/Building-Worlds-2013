@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{78608002-3CF8-CF1C-BA43-50D2108AB0A2}") = "Week2hw(movie_w_scripting)", "Assembly-CSharp.csproj", "{301F1C1F-B14A-E7B9-A8FB-130F7052A270}"
+Project("{3BE75707-8E36-DC3C-97E3-D912A5A286A4}") = "Week3", "Assembly-CSharp.csproj", "{6EA5C037-B9E4-03FA-5B82-AE9106915252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{301F1C1F-B14A-E7B9-A8FB-130F7052A270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{301F1C1F-B14A-E7B9-A8FB-130F7052A270}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{301F1C1F-B14A-E7B9-A8FB-130F7052A270}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{301F1C1F-B14A-E7B9-A8FB-130F7052A270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA5C037-B9E4-03FA-5B82-AE9106915252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA5C037-B9E4-03FA-5B82-AE9106915252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA5C037-B9E4-03FA-5B82-AE9106915252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA5C037-B9E4-03FA-5B82-AE9106915252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-									GlobalSection(MonoDevelopProperties) = preSolution
+	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -35,5 +35,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal
