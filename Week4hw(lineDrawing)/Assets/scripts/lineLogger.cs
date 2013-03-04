@@ -16,7 +16,7 @@ public class lineLogger : MonoBehaviour {
 		
 		lineRenderer = GetComponent<LineRenderer>(); // Grab reference to LineRenderer.
 		
-		InvokeRepeating("RecordPosition", 0f, 0.1f); // Call RecordPosition() every 2 seconds after an initial delay of 0 seconds.
+		InvokeRepeating("RecordPosition", 0f, 0.1f); // Call RecordPosition() every .1 seconds after an initial delay of 0 seconds.
 	}
 	
 	// Update is called once per frame

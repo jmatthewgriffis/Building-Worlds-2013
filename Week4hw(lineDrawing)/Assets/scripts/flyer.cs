@@ -30,7 +30,7 @@ public class flyer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("towardsJedi=" + towardsJedi + "; whatsmytarget=" + WhatsMyTarget);
+		//Debug.Log("towardsJedi=" + towardsJedi + "; whatsmytarget=" + WhatsMyTarget);
 		
 		if (towardsJedi == true) {
 			WhatsMyTarget = Jedi;
@@ -42,10 +42,12 @@ public class flyer : MonoBehaviour {
 	
 	// If the projectile hits a target, reverse direction:
 	void OnTriggerEnter(Collider other) {
-		refLineScript.pastPositions.RemoveRange(0,refLineScript.numLines);
-		if (WhatsMyTarget == Stormtrooper) {
+		//refLineScript.pastPositions.RemoveRange(0,refLineScript.numLines); // I thought this would help resolve a speed
+		// issue but it ended up delaying the rebound of the laser! Commented out.
+		/*if (WhatsMyTarget == Stormtrooper) {
 			Destroy(StormtrooperHit);
-		}
+		}*/
+		Debug.Log("collision!");
         towardsJedi = !towardsJedi;
 	}
 	
