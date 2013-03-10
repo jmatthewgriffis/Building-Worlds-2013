@@ -16,10 +16,10 @@ public class useCue : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		cuePos
+		//cuePos = new Vector3(
 			//Input(mousePos);
 		
-		transform.position = Input.mousePosition;
+		//transform.position = Input.mousePosition;
 		
 		if (Input.GetMouseButton(0)) {
 			Debug.Log("Pressed!");

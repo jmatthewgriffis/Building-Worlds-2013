@@ -9,14 +9,18 @@ public class flyer : MonoBehaviour {
 	public Transform Jedi; // Use to track the Jedi's position.
 	public Transform Stormtrooper; // Use to track the stormtrooper's position.
 	public GameObject StormtrooperHit; // Use to destroy the stormtrooper.
+	public GameObject Self; // Use to destroy the projectile itself.
 	Transform WhatsMyTarget;
 	bool towardsJedi;
+	bool addToTimer;
+	int timer;
 	
 	public lineLogger refLineScript; // Use this to refer to functions in this script via another script.
 	
 	// Use this for initialization
 	void Start () {
 		towardsJedi = true;
+		addToTimer = false;
 		// "Invoke" lets you control when a coroutine starts, while "InvokeRepeating" lets you call the coroutine repeatedly.
 		//Invoke ("StartMoving", 2f);
 		// First number is delay before first call; second number is interval thereafter between calls.
@@ -31,6 +35,7 @@ public class flyer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log("towardsJedi=" + towardsJedi + "; whatsmytarget=" + WhatsMyTarget);
+		Debug.Log(timer);
 		
 		if (towardsJedi == true) {
 			WhatsMyTarget = Jedi;
@@ -38,16 +43,25 @@ public class flyer : MonoBehaviour {
 		else {
 			WhatsMyTarget = Stormtrooper;
 		}
+		
+		if (addToTimer == true) {
+			timer ++;
+		}
+		
+		if (timer >= 95) {
+				Destroy(StormtrooperHit);
+				Destroy(Self);
+			}
 	}
 	
 	// If the projectile hits a target, reverse direction:
 	void OnTriggerEnter(Collider other) {
 		//refLineScript.pastPositions.RemoveRange(0,refLineScript.numLines); // I thought this would help resolve a speed
 		// issue but it ended up delaying the rebound of the laser! Commented out.
-		/*if (WhatsMyTarget == Stormtrooper) {
-			Destroy(StormtrooperHit);
-		}*/
-		Debug.Log("collision!");
+		if (WhatsMyTarget == Stormtrooper) {
+			addToTimer = true;
+		}
+		//Debug.Log("collision!");
         towardsJedi = !towardsJedi;
 	}
 	
