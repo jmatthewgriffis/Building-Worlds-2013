@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\analyzeAudio.cs" />
      <Compile Include="Assets\scripts\cubeCloner.cs" />
      <Compile Include="Assets\scripts\flyer.cs" />
   </ItemGroup>
