@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Generic; // This is necessary to use Lists.
 
 public class cubeCloner : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class cubeCloner : MonoBehaviour
 	
 	// We have a script called flyer; let's make a slot to associate a prefab with that script to this script.
 	public flyer cubePrefab;
-	//List
+	List<flyer> myFlyers = new List<flyer>();
 	public int cubeCount = 10;
 
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class cubeCloner : MonoBehaviour
 		// "Vector3.zero" is shorthand for "Vector3(0,0,0)."
 		for (int i = 0; i < cubeCount; i++) {
 			flyer tempFlyer = Instantiate (cubePrefab, Vector3.zero, Quaternion.identity) as flyer;
-			//flyerList.Add(tempFlyer); // 
+			myFlyers.Add(tempFlyer); // Add the temp object to the list.
 			tempFlyer.speed = i;
 			tempFlyer.SetNewTarget();
 		}
@@ -30,6 +30,6 @@ public class cubeCloner : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		Debug.Log(myFlyers.Count);
 	}
 }
