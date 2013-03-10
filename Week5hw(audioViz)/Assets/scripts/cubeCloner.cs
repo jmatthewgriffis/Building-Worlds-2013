@@ -30,6 +30,6 @@ public class cubeCloner : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		Debug.Log(myFlyers.Count);
+		//Debug.Log(myFlyers.Count);
 	}
 }

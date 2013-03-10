@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/cubeCloner.cs">
     <Files>
-      <File FileName="Assets/scripts/cubeCloner.cs" Line="26" Column="3" />
-      <File FileName="Assets/scripts/flyer.cs" Line="12" Column="3" />
+      <File FileName="Assets/scripts/cubeCloner.cs" Line="10" Column="38" />
+      <File FileName="Assets/scripts/flyer.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
