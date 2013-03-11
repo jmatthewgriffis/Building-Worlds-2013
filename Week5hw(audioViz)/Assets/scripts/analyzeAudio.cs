@@ -11,6 +11,10 @@ public class analyzeAudio : MonoBehaviour {
 	public List<flyer> myFlyers = new List<flyer>();
 	public int cubeCount = 10;
 	float mixItUp;
+	
+	public Color c1 = Color.yellow;
+    public Color c2 = Color.red;
+    public int lengthOfLineRenderer = 20;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +30,12 @@ public class analyzeAudio : MonoBehaviour {
 		
 		samplez = 1024;
 		samplezArray = new float [samplez];
+		
+		LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
+        lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+        lineRenderer.SetColors(c1, c2);
+        lineRenderer.SetWidth(0.2F, 0.2F);
+        lineRenderer.SetVertexCount(lengthOfLineRenderer);
 	}
 	
 	// Update is called once per frame
@@ -65,5 +75,13 @@ public class analyzeAudio : MonoBehaviour {
 		if (i >= 1023) {
 			i = 1;
 		}
+		
+	LineRenderer lineRenderer = GetComponent<LineRenderer>();
+        int k = 0;
+        while (k < lengthOfLineRenderer) {
+            Vector3 pos = new Vector3(k * 0.5F, Mathf.Sin(k + Time.time), 0);
+            lineRenderer.SetPosition(k, pos);
+            k++;
+        }	
 	}
 }
