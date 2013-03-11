@@ -66,6 +66,16 @@ public class analyzeAudio : MonoBehaviour {
             	Debug.DrawLine(new Vector3(i - 1, Mathf.Log(samplezArray[i - 1]) + 10, 2), new Vector3(myFlyers[j].transform.localPosition.x, myFlyers[j].transform.localPosition.y, myFlyers[j].transform.localPosition.z), Color.cyan);
             	Debug.DrawLine(new Vector3(Mathf.Log(i - 1), samplezArray[i - 1] - 10, 1), new Vector3(myFlyers[j].transform.localPosition.x, myFlyers[j].transform.localPosition.y, myFlyers[j].transform.localPosition.z), Color.green);
             	Debug.DrawLine(new Vector3(Mathf.Log(i - 1), Mathf.Log(samplezArray[i - 1]), 3), new Vector3(myFlyers[j].transform.localPosition.x, myFlyers[j].transform.localPosition.y, myFlyers[j].transform.localPosition.z), Color.yellow);
+			
+			/*LineRenderer lineRenderer = GetComponent<LineRenderer>();
+        int k = 0;
+        while (k < lengthOfLineRenderer) {
+			Vector3 pos = new Vector3(myFlyers[j].transform.localPosition.x, myFlyers[j].transform.localPosition.y, myFlyers[j].transform.localPosition.z);
+			Vector3 pos = new Vector3(i - 1, samplezArray[i] + 10, 0);
+            //Vector3 pos = new Vector3(k * 0.5F, Mathf.Sin(k + Time.time), 0);
+            lineRenderer.SetPosition(k, pos);
+            k++;
+        }*/	
 			}
             
             i++;
@@ -76,12 +86,12 @@ public class analyzeAudio : MonoBehaviour {
 			i = 1;
 		}
 		
-	LineRenderer lineRenderer = GetComponent<LineRenderer>();
+	/*LineRenderer lineRenderer = GetComponent<LineRenderer>();
         int k = 0;
         while (k < lengthOfLineRenderer) {
-            Vector3 pos = new Vector3(k * 0.5F, Mathf.Sin(k + Time.time), 0);
+			Vector3 pos = new Vector3(i - 1, samplezArray[i] + 10, 0);
+            //Vector3 pos = new Vector3(k * 0.5F, Mathf.Sin(k + Time.time), 0);
             lineRenderer.SetPosition(k, pos);
-            k++;
+            k++;*/
         }	
 	}
-}

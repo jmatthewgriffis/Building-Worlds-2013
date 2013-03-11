@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Week4hw(lineDrawing)/Assets/scripts/lineLogger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/analyzeAudio.cs">
     <Files>
-      <File FileName="../Week4hw(lineDrawing)/Assets/scripts/lineLogger.cs" Line="7" Column="2" />
+      <File FileName="Assets/scripts/dance.cs" Line="17" Column="13" />
+      <File FileName="Assets/scripts/analyzeAudio.cs" Line="78" Column="12" />
+      <File FileName="Assets/scripts/flyer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
