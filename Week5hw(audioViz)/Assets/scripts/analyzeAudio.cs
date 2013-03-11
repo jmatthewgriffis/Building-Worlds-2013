@@ -60,7 +60,7 @@ public class analyzeAudio : MonoBehaviour {
             
             i++;
             
-			//Debug.Log(i);
+			Debug.Log(i);
         }
 		if (i >= 1023) {
 			i = 1;

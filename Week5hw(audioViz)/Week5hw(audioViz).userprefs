@@ -1,12 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/analyzeAudio.cs">
-    <Files>
-      <File FileName="Assets/scripts/cubeCloner.cs" Line="3" Column="69" />
-      <File FileName="Assets/scripts/flyer.cs" Line="24" Column="3" />
-      <File FileName="Assets/scripts/analyzeAudio.cs" Line="41" Column="25" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
