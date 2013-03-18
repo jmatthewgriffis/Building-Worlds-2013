@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Not related, but image credit for the LEGO Star Destroyer goes here: http://www.brickwars-sets.com/brickwars-sets_pictures/more_views/LEGO_6211_PIC.jpg
+
 public class triggersCollide : MonoBehaviour {
 	
 	// A simple script to destroy an object when two objects collide.
