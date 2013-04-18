@@ -3,7 +3,6 @@ using System.Collections;
 
 public class moveCharacter : MonoBehaviour {
 	
-	bool gravOn;
 	bool allowJump;
 	float capsuleRad;
 	public float moveSpeed;
@@ -29,10 +28,8 @@ public class moveCharacter : MonoBehaviour {
 		
 		#region GRAVITY
         if (!Physics.Raycast(transform.position, -transform.up, 1f) && yVel == 0) { // Shoot a raycast downward; if it doesn't hit anything within 1 distance and we're not jumping...
-            gravOn = true;
 			transform.position += Physics.gravity * Time.deltaTime; // ...move downward with gravity.
     	}
-		else { gravOn = false; }
 		#endregion
 		
 		#region MOVING // This lets you collapse certain code sections easily.
@@ -60,7 +57,7 @@ public class moveCharacter : MonoBehaviour {
 		
 		transform.position += new Vector3(0, yVel, 0) * Time.deltaTime; // Jump if on a surface and there's nothing overhead.
 		
-		if (Input.GetKey(KeyCode.J) && allowJump == true && Physics.Raycast(transform.position, -transform.up, 1f) && !Physics.Raycast(transform.position, transform.up, 1.5f)) {
+		if (Input.GetKey(KeyCode.J) && allowJump == true && Physics.Raycast(transform.position, -transform.up, 1f)) {
 			yVel = maxJump;
 			allowJump = false;
 		}
@@ -68,6 +65,7 @@ public class moveCharacter : MonoBehaviour {
 			yVel = 0;
 			if (Physics.Raycast(transform.position, -transform.up, 1f)) allowJump = true;
 		}
+		if (Physics.Raycast(transform.position, transform.up, 1.0f)) yVel = 0;
 		#endregion
 		
 		#region TURNING // This lets you collapse certain code sections easily.
