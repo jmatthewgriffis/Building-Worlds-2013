@@ -11,6 +11,8 @@ public class moveCharacter : MonoBehaviour {
 	float yVel;
 	public float gravity;
 	public float maxJump;
+	Vector3 origin;
+	float abyss;
 
 	// Use this for initialization
 	void Start () {
@@ -21,10 +23,14 @@ public class moveCharacter : MonoBehaviour {
 		yVel = 0;
 		gravity = -0.5f;
 		maxJump = 15f;
+		origin = new Vector3(0,10,0);
+		abyss = -10;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if (transform.position.y < abyss) transform.position = origin; // If you fall off the edge, warp back to the beginning.
 		
 		#region GRAVITY
         if (!Physics.Raycast(transform.position, -transform.up, 1f) && yVel == 0) { // Shoot a raycast downward; if it doesn't hit anything within 1 distance and we're not jumping...
