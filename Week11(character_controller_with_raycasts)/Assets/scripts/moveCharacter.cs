@@ -13,10 +13,12 @@ public class moveCharacter : MonoBehaviour {
 	Vector3 origin;
 	float abyss;
 	public float triggerGrav;
+	float capsuleHeight;
 
 	// Use this for initialization
 	void Start () {
-		capsuleRad = 0.5f;
+		capsuleRad = 1.0f;
+		capsuleHeight = 4.5f;
 		moveSpeed = 5.0f;
 		turnRate = 125.0f;
 		yVel = 0;
@@ -24,7 +26,7 @@ public class moveCharacter : MonoBehaviour {
 		maxJump = 15f;
 		origin = new Vector3(0,20,0);
 		abyss = -10;
-		triggerGrav = 2;
+		triggerGrav = 0.25f;
 	}
 	
 	// Update is called once per frame
@@ -40,8 +42,8 @@ public class moveCharacter : MonoBehaviour {
 		
 		#region MOVING // This lets you collapse certain code sections easily.
 		
-		Vector3 p1 = transform.position - transform.up; // Top of capsule
-		Vector3 p2 = transform.position + transform.up; // Bottom of capsule
+		Vector3 p1 = transform.position + transform.up * capsuleHeight/2; // Top of capsule
+		Vector3 p2 = transform.position - transform.up * capsuleHeight/2; // Bottom of capsule
 		
 		bool capsuleCastHitWall = Physics.CapsuleCast(p1, p2, capsuleRad, transform.forward, capsuleRad);
 		if (Input.GetKey(KeyCode.W) && !capsuleCastHitWall) { // Use GetKey so it refreshes every frame (as oppoosed to GetKeyDown).
@@ -67,7 +69,7 @@ public class moveCharacter : MonoBehaviour {
 			yVel = 0;
 			if (Physics.Raycast(transform.position, -transform.up, triggerGrav)) allowJump = true;
 		}
-		if (Physics.Raycast(transform.position, transform.up, 1.0f)) yVel = 0;
+		if (Physics.Raycast(transform.position + new Vector3(0,capsuleHeight/3,0), transform.up, 1.0f)) yVel = 0;
 		#endregion
 		
 		#region TURNING // This lets you collapse certain code sections easily.
