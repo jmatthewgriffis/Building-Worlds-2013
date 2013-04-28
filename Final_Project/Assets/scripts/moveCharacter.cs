@@ -26,8 +26,8 @@ public class moveCharacter : MonoBehaviour {
 		yVel = 0;
 		gravity = -0.5f;
 		maxJump = 15f;
-		origin = new Vector3(0,20,0);
-		abyss = -10;
+		origin = new Vector3(0,30,0);
+		abyss = -20;
 		triggerGrav = 0.25f;
 	}
 	
