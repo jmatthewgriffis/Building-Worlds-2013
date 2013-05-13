@@ -21,11 +21,11 @@ public class moveCharacter : MonoBehaviour {
 		capsuleRad = 0.75f;
 		headCtr = new Vector3(0,capsuleRad,0);
 		capsuleHeight = 4.5f;
-		moveSpeed = 5.0f;
+		moveSpeed = 10f;
 		turnRate = 125.0f;
 		yVel = 0;
 		gravity = -0.5f;
-		maxJump = 15f;
+		maxJump = 25f;
 		origin = new Vector3(0,30,0);
 		abyss = -20;
 		triggerGrav = 0.25f;
